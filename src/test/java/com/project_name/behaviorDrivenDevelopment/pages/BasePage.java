@@ -1,4 +1,4 @@
-package com.project_name.pages;
+package com.project_name.behaviorDrivenDevelopment.pages;
 
 
 

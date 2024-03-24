@@ -1,6 +1,6 @@
-package com.project_name.step_definitions;
+package com.project_name.behaviorDrivenDevelopment.step_definitions;
 
-import com.project_name.pages.LoginPage;
+import com.project_name.behaviorDrivenDevelopment.pages.LoginPage;
 import com.project_name.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {

@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class WebInputPom {
-    public static final String numbers = "123456";
+    public static final String numbers = "152648";
     public static final String Text = "text";
     public static final String password = "123456";
     LocalDate currentDate = LocalDate.now();
@@ -42,4 +42,7 @@ public class WebInputPom {
 
     @FindBy(xpath = "//input[@class='input-box']")
     public List<WebElement> actualInputData;
+
+    @FindBy(xpath = "//strong")
+    public List<WebElement> outputInputData;
 }
