@@ -1,4 +1,4 @@
-package com.project_name.tdd;
+package com.project_name.tdd.test;
 
 import com.project_name.utilities.Driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
