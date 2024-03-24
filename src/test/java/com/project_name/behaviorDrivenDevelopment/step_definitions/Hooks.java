@@ -1,4 +1,4 @@
-package com.project_name.step_definitions;
+package com.project_name.behaviorDrivenDevelopment.step_definitions;
 
 
 

@@ -16,13 +16,13 @@ public class WebInputPage {
 
    private static WebInputPom webInputPom =new WebInputPom();
 
-    @Before
-    public void navigateToHomePage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("urlPractice"));
-    }
+//    @Before
+//    public void navigateToHomePage() {
+//        Driver.getDriver().get(ConfigurationReader.getProperty("urlPractice"));
+//    }
 
 @Test
-    public  void verifyInputDataAgainstOutputData(){
+    public static boolean verifyInputDataAgainstOutputData(){
 
         webInputPom.webInputButton.click();
         webInputPom.inputNumber.sendKeys(WebInputPom.numbers);
@@ -30,16 +30,21 @@ public class WebInputPage {
         webInputPom.inputPassword.sendKeys(WebInputPom.password);
         webInputPom.inputDate.sendKeys(webInputPom.formattedDate);
         webInputPom.displayButton.click();
+
     List<WebElement> actualInputData = webInputPom.actualInputData;
-    List<String> listOfValues = actualInputData.stream()
+    List<String> inputList = actualInputData.stream()
             .map(element -> element.getAttribute("value"))
             .collect(Collectors.toList());
-        System.out.println("listOfData = " + listOfValues);
+    System.out.println("inputList = " + inputList);
+
+    List<WebElement> outputInputData = webInputPom.outputInputData;
+    List<String> outputList = outputInputData.stream()
+                    .map(WebElement::getText)
+                            .collect(Collectors.toList());
+    System.out.println("outputList = " + outputList);
 
 
-        BrowserUtils.sleep(2);
-        //Driver.getDriver().close();
 
+return inputList.equals(outputList);
     }
-
 }
