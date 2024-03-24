@@ -1,4 +1,4 @@
-package com.project_name.step_definitions;
+package com.project_name.tdd;
 
 import com.project_name.utilities.Driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
