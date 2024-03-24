@@ -1,4 +1,4 @@
-package com.project_name.tdd.pom;
+package com.project_name.testingDrivenDevelopement.pom;
 
 import com.project_name.utilities.Driver;
 import org.openqa.selenium.WebElement;
