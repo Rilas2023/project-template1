@@ -28,11 +28,10 @@ public class WebInputPage {
         webInputPom.inputNumber.sendKeys(WebInputPom.numbers);
         webInputPom.inputText.sendKeys(WebInputPom.Text);
         webInputPom.inputPassword.sendKeys(WebInputPom.password);
-        webInputPom.inputDate.sendKeys(WebInputPom.date);
+        webInputPom.inputDate.sendKeys(webInputPom.formattedDate);
         webInputPom.displayButton.click();
-        List<WebElement> actualData = Driver.getDriver().findElements(By.xpath("//input[@class='input-box']"));
-
-    List<String> listOfValues = actualData.stream()
+    List<WebElement> actualInputData = webInputPom.actualInputData;
+    List<String> listOfValues = actualInputData.stream()
             .map(element -> element.getAttribute("value"))
             .collect(Collectors.toList());
         System.out.println("listOfData = " + listOfValues);
