@@ -82,6 +82,7 @@ public class Driver {
 
     public static void waitForElementTobVisible(By element){
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
