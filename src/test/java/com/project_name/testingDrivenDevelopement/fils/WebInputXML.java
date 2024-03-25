@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class FilesXML {
+public class WebInputXML {
     public static final String numbers = "152648";
     public static final String Text = "text";
     public static final String password = "123456";
@@ -18,7 +18,7 @@ public class FilesXML {
     public  String formattedDate = currentDate.format(formatter);
 
 
-    public FilesXML() {
+    public WebInputXML() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
