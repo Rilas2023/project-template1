@@ -1,4 +1,4 @@
-package com.project_name.runners;
+package com.project_name.behaviorDrivenDevelopment.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
