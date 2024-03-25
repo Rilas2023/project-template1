@@ -31,7 +31,7 @@ public class WebInputTest {
         Assert.assertTrue(NotificationMessagePage.notificationMessageVerification());
     }
 
-    @After
+    @After  //comment after
     public  void tearDown(){
         Driver.closeDriver();
     }
