@@ -1,5 +1,8 @@
 package com.project_name.testingDrivenDevelopement.test;
 
+
+import com.project_name.testingDrivenDevelopement.pages.DynamicTablePage;
+
 import com.project_name.testingDrivenDevelopement.pages.NotificationMessagePage;
 import com.project_name.testingDrivenDevelopement.pages.WebInputPage;
 import com.project_name.utilities.BrowserUtils;
@@ -15,17 +18,44 @@ public class WebInputTest {
 
 
     @Before
+
     public void navigateToHomePage(){
+
         Driver.getDriver().get(ConfigurationReader.getProperty("urlPractice"));
     }
 
     @Test
+
+
     public void webInputVerification()  {
+
 
         Assert.assertTrue(WebInputPage.verifyInputDataAgainstOutputData());
     }
 
     @Test
+
+    public void notificationMessageVerificationA() {
+        try {
+            Assert.assertTrue(NotificationMessagePage.notificationMessageVerification());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void dynamicTableURLAssertion() {
+        Assert.assertTrue(DynamicTablePage.dynamicTableAccess());
+    }
+
+    @Test
+    public void memoryAvgOfInternetExplorer() throws InterruptedException {
+        Thread.sleep(3000);
+        System.out.println("DynamicTablePage.memory_avg() = " + DynamicTablePage.memory_avg());
+    }
+    @After
+    public void tearDown() {
+
     public void notificationMessageVerificationA(){
 
         Assert.assertTrue(NotificationMessagePage.notificationMessageVerification());
@@ -33,6 +63,7 @@ public class WebInputTest {
 
     @After  //comment after
     public  void tearDown(){
+
         Driver.closeDriver();
     }
 }
