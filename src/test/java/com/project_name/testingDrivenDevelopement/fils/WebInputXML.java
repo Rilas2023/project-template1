@@ -1,4 +1,4 @@
-package com.project_name.testingDrivenDevelopement.pom;
+package com.project_name.testingDrivenDevelopement.fils;
 
 import com.project_name.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class WebInputPom {
+public class WebInputXML {
     public static final String numbers = "152648";
     public static final String Text = "text";
     public static final String password = "123456";
@@ -18,7 +18,7 @@ public class WebInputPom {
     public  String formattedDate = currentDate.format(formatter);
 
 
-    public WebInputPom() {
+    public WebInputXML() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
