@@ -24,7 +24,7 @@ public class WebInputTest {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("urlPractice"));
     }
-
+    @DisplayName("Delete")
     @Test
     @Order(4)
     public void webInputVerification()  {
@@ -32,7 +32,7 @@ public class WebInputTest {
 
         Assertions.assertTrue(WebInputPage.verifyInputDataAgainstOutputData());
     }
-
+@DisplayName("update")
     @Test
 @Order(3)
     public void notificationMessageVerificationA() {
@@ -42,12 +42,13 @@ public class WebInputTest {
             e.printStackTrace();
         }
     }
+    @DisplayName("post")
     @Order(1)
     @Test
     public void dynamicTableURLAssertion() {
         Assertions.assertTrue(DynamicTablePage.dynamicTableAccess());
     }
-
+@DisplayName("get")
     @Order(2)
     @Test
     public void memoryAvgOfInternetExplorer() throws InterruptedException {
