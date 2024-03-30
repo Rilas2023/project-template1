@@ -8,8 +8,8 @@ public class RadioButtonPage {
 
 
     public static void radioButtonVerification() {
-
-        radioButtonsXML.radioButtonsPageButton.click();
+radioButtonsXML.radioButtonsPageButton.click();
+       RadioButtonsXML.radioButtons("Football").click();
 
     }
 
