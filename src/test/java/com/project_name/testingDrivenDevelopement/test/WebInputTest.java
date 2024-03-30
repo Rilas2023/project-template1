@@ -4,6 +4,7 @@ package com.project_name.testingDrivenDevelopement.test;
 import com.project_name.testingDrivenDevelopement.pages.DynamicTablePage;
 
 import com.project_name.testingDrivenDevelopement.pages.NotificationMessagePage;
+import com.project_name.testingDrivenDevelopement.pages.RadioButtonPage;
 import com.project_name.testingDrivenDevelopement.pages.WebInputPage;
 import com.project_name.utilities.BrowserUtils;
 import com.project_name.utilities.ConfigurationReader;
@@ -62,6 +63,12 @@ public class WebInputTest {
         System.out.println("DynamicTablePage.memory_avg() = " + DynamicTablePage.memory_avg());
     }
 
+    @Test
+    public void radioButtonVery(){
+
+        RadioButtonPage.radioButtonVerification();
+
+    }
 
     @After//comment after
     public void tearDown() throws InterruptedException {
