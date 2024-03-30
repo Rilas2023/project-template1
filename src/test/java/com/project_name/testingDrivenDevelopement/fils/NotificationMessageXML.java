@@ -9,8 +9,7 @@ public class NotificationMessageXML {
 
     public static final String expectedUnsuccessfulMessage = "Action unsuccessful, please try again";
 
-    public NotificationMessageXML(){
-
+    public NotificationMessageXML() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

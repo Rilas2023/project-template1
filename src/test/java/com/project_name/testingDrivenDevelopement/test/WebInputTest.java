@@ -10,31 +10,35 @@ import com.project_name.utilities.ConfigurationReader;
 import com.project_name.utilities.Driver;
 
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import io.cucumber.java.AfterAll;
+import org.junit.Before;
 import org.junit.jupiter.api.*;
 import org.junit.runner.OrderWith;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class WebInputTest {
 
 
-  @BeforeEach
-    public void navigateToHomePage(){
+    @BeforeEach
+    public void navigateToHomePage() {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("urlPractice"));
     }
-    @DisplayName("Delete")
+
+    @DisplayName("WebInput Verification")
     @Test
-    @Order(4)
-    public void webInputVerification()  {
+    // @Order(4)
+    public void webInputVerification() {
 
 
         Assertions.assertTrue(WebInputPage.verifyInputDataAgainstOutputData());
     }
-@DisplayName("update")
+
+    @DisplayName("Notification Message")
     @Test
-@Order(3)
+    //@Order(3)
     public void notificationMessageVerificationA() {
         try {
             Assertions.assertTrue(NotificationMessagePage.notificationMessageVerification());
@@ -42,14 +46,16 @@ public class WebInputTest {
             e.printStackTrace();
         }
     }
-    @DisplayName("post")
-    @Order(1)
+
+    @DisplayName("Dynamic Table")
+   // @Order(1)
     @Test
     public void dynamicTableURLAssertion() {
         Assertions.assertTrue(DynamicTablePage.dynamicTableAccess());
     }
-@DisplayName("get")
-    @Order(2)
+
+    @DisplayName("Memory Average ")
+   // @Order(2)
     @Test
     public void memoryAvgOfInternetExplorer() throws InterruptedException {
         Thread.sleep(3000);
@@ -57,8 +63,9 @@ public class WebInputTest {
     }
 
 
-    @After  //comment after
-    public  void tearDown(){
+    @After//comment after
+    public void tearDown() throws InterruptedException {
         Driver.closeDriver();
+        Thread.sleep(2000);
     }
 }
