@@ -3,6 +3,7 @@ package com.project_name.testingDrivenDevelopement.pages;
 import com.project_name.testingDrivenDevelopement.fils.DynamicTableXML;
 import com.project_name.utilities.Driver;
 import io.cucumber.java.eo.Do;
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Pause;
 
 public class DynamicTablePage {
@@ -22,7 +23,9 @@ public class DynamicTablePage {
 
     public static double memory_avg() throws InterruptedException {
 
-        dynamicTable.dynamic_table_link.click();
+       // dynamicTable.dynamic_table_link.click();
+        By element1 = Element.El.element1;
+        Driver.getDriver().findElement(element1).click();
         Thread.sleep(3000);
         double mem = 0;
         for (int i = 0; i < 5; i++) {
