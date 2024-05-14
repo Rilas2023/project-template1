@@ -33,5 +33,6 @@ public class DynamicTablePage {
             mem += Double.parseDouble(dynamicTable.memory(DynamicTableXML.internet_Explorer).replace("MB",""));
         }
         return mem / 5;
+        // data
     }
 }
