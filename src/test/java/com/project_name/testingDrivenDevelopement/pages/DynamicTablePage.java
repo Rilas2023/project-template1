@@ -6,8 +6,21 @@ import io.cucumber.java.eo.Do;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Pause;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DynamicTablePage {
     static DynamicTableXML dynamicTable = new DynamicTableXML();
+
+    public static void main(String[] args) {
+        Map map = new HashMap<>();
+        for (Object o : map.entrySet()) {
+            
+        }
+        
+    }
+    
+    
 
 
     public static boolean dynamicTableAccess()  {

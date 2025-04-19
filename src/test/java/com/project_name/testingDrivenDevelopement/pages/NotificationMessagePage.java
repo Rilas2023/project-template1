@@ -11,8 +11,8 @@ public class NotificationMessagePage {
 
     public  static boolean notificationMessageVerification(){
 
-       notificationMessage.notificationMessage.click();
-       notificationMessage.clickHere.click();
+        notificationMessage.notificationMessage.click();
+        notificationMessage.clickHere.click();
         String actualUnsuccessfulMessage = notificationMessage.UnsuccessfulMessage.getText();
         String expectedUnsuccessfulMessage = NotificationMessageXML.expectedUnsuccessfulMessage;
         return expectedUnsuccessfulMessage.equals(actualUnsuccessfulMessage);

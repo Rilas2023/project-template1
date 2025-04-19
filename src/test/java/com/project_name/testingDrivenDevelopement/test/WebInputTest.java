@@ -65,9 +65,7 @@ public class WebInputTest {
 
     @Test
     public void radioButtonVery(){
-
         RadioButtonPage.radioButtonVerification();
-
     }
 
     @After//comment after
