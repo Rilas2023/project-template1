@@ -18,7 +18,11 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class BasePage {
+// add some changes 
 
+    public void method(){
+    }
+    
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
