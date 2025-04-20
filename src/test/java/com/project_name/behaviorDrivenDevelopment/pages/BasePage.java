@@ -26,6 +26,9 @@ public abstract class BasePage {
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
+
+    // new changes by another developer
+    
     @FindBy(css = "div[class='loader-mask shown']")
     @CacheLookup
     protected WebElement loaderMask;
@@ -36,6 +39,17 @@ public abstract class BasePage {
     @FindBy(css = "#user-menu > a")
     public WebElement userName;
 
+// then another changes
+
+    public void t(){
+
+
+        
+    }
+    // another chages by another
+
+    // then my chaneges
+    // then another changes
     @FindBy(linkText = "Logout")
     public WebElement logOutLink;
 
