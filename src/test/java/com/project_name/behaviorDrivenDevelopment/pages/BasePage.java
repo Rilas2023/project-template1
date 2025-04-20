@@ -35,6 +35,9 @@ public abstract class BasePage {
     @FindBy(css = "#user-menu > a")
     public WebElement userName;
 
+
+
+    // another chages by another 
     @FindBy(linkText = "Logout")
     public WebElement logOutLink;
 
